@@ -1,7 +1,21 @@
 @use '../variables/index.scss' as variables;
 
+@use "./headings";
+@use "./lists";
+@use "./buttons";
+@use "./forms";
+@use "./tables";
+@use "./utilities";
+@use "./flex";
+@use "./align";
+@use "./justify";
+@use "./images";
+
+
+
+
 body {
-    font-family: variables.$font-body;   
+    font-family: variables.$font-family-body;   
 }
 
 h1 {
@@ -9,6 +23,6 @@ h1 {
     font-weight: 800;
 }
 
-.code-example {
-    font-family: variables.$font-code;
-}
+// .code-example {
+//     font-family: variables.$font-code;
+// }

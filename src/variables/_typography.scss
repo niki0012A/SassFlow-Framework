@@ -1,19 +1,61 @@
 @use 'sass:map';
-@use '../fonts/' as fonts;
+@use '../fonts/index' as fonts;
 @use './sizing.scss' as sizing;
-
-//$font-body: inter.$font-inter;
-$fonts: (
-    'inter': fonts.$font-inter,
-    'fira-code': fonts.$font-fira-code,
-);
-
-$font-body: map.get($fonts, 'inter');
-$font-code: map.get($fonts, 'fira-code');
+@use './theme.scss' as theme;
 
 
+//Typography Variables
+//Font Families
+$font-family-body: "font-inter", sans-serif;
+$font-family-heading: "font-fira-code", monospace;
+
+
+//Font Weights
+$fw-black: 900;
+$fw-extrabold: 800;
+$fw-bold: 700;
+$fw-semibold: 600;
+$fw-medium: 500;
+$fw-regular: 400;
+$fw-light: 300;
+$fw-extralight: 200;
+$fw-thin: 100;
+
+//line heights
+$line-height-base: 1.6;
+$line-height-heading: 1.2;
+
+//Font Sizes utilities
 @each $size, $value in sizing.$font-sizes {
     .text-#{$size} {
         font-size: $value;
     }
 }
+//Text color utilities
+@each $name, $color in theme.$theme {
+    .text-#{$name} {
+        color: $color;
+    }
+}
+
+body {
+    font-family: $font-family-body;
+    line-height: $line-height-base;
+    font-weight: $fw-regular;
+    font-size: map.get(sizing.$font-sizes, 'md');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-heading;
+    line-height: $line-height-heading;
+}
+
+h1 { font-size: map.get(sizing.$font-sizes, '4xl'); }
+h2 { font-size: map.get(sizing.$font-sizes, '3xl'); }
+h3 { font-size: map.get(sizing.$font-sizes, '2xl'); }
+h4 { font-size: map.get(sizing.$font-sizes, 'xl'); }
+h5 { font-size: map.get(sizing.$font-sizes, 'lg'); }
+h6 { font-size: map.get(sizing.$font-sizes, 'md'); }
+h1, h2, h3 { font-weight: $fw-bold; }
+h4, h5, h6 { font-weight: $fw-semibold; }       
+

@@ -1,0 +1,26 @@
+@use './colors' as colors;
+
+// Theme map for consistent color usage across the framework
+$theme: (
+  "primary": colors.$dark-blue,
+  "info": colors.$light-blue,
+  "secondary": colors.$purple,
+  "warning": colors.$yellow,
+  "danger": colors.$red,
+  "success": colors.$sage-green,
+  "warm-beige": colors.$warm-beige,
+  "deep-teal": colors.$deep-teal,
+  "vibrant-coral": colors.$vibrant-coral,
+  "dark-charcoal": colors.$dark-charcoal,
+  "soft-mint": colors.$soft-mint,
+  "bright-white": colors.$bright-white
+);
+
+//List Variables
+$list-bullet: disc;
+$list-number: decimal;
+$list-alpha-lower: lower-alpha;
+$list-alpha-upper: upper-alpha;
+$list-roman-lower: lower-roman;
+$list-roman-upper: upper-roman;
+

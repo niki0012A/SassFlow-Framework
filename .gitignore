@@ -1,0 +1,6 @@
+src/**/index.css
+src/**/index.css.map
+node_modules/
+*~
+
+
