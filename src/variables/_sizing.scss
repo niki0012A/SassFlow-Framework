@@ -134,13 +134,13 @@ $container-sizes: (
   expansive: 1200px
 );
 
-// Generate width utilities
+//  width utilities
 @each $name, $value in $width {
   .w-#{$name} {
     width: $value;
   }
 }
-// Generate height utilities
+// height utilities
 @each $name, $value in $height {
   .h-#{$name} {
     height: $value;
@@ -153,14 +153,14 @@ $container-sizes: (
         height: $value;
     }
 }
-// Generate special height utilities
+//  special height utilities
 @each $name, $value in $special-height {
   .h-#{$name} {
     height: $value;
   }
 }
 
-// Generate container max-width utilities
+// container max-width utilities
 @each $name, $value in $container-sizes {
   .max-w-#{$name} {
     max-width: $value;
