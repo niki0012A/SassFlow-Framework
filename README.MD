@@ -1,6 +1,6 @@
 # SASSFLOW Framework
 
-**Sassflow** is a responsive and customizable CSS framework built using **Sass** and organized through **Sass partials**. It is designed to help developers and designers rapidly prototype and build visually consistent websites by offering utility classes, modular theming, and clean base styling for standard HTML elements.
+**Sassflow** is a 
 
 ---
 
@@ -11,6 +11,7 @@
 Created by:  
 - Anna   
 - Faoziyyah Busari 
+- 
 - 
 
 ---
