@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
   all: unset;
   display: revert;
@@ -85,6 +89,578 @@ meter {
   display: none;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-none {
+  margin: 0;
+}
+
+.mt-none {
+  margin-top: 0;
+}
+
+.mb-none {
+  margin-bottom: 0;
+}
+
+.ml-none {
+  margin-left: 0;
+}
+
+.mr-none {
+  margin-right: 0;
+}
+
+.mx-none {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my-none {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.p-none {
+  padding: 0;
+}
+
+.pt-none {
+  padding-top: 0;
+}
+
+.pb-none {
+  padding-bottom: 0;
+}
+
+.pl-none {
+  padding-left: 0;
+}
+
+.pr-none {
+  padding-right: 0;
+}
+
+.px-none {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.m-xs {
+  margin: 0.5rem;
+}
+
+.mt-xs {
+  margin-top: 0.5rem;
+}
+
+.mb-xs {
+  margin-bottom: 0.5rem;
+}
+
+.ml-xs {
+  margin-left: 0.5rem;
+}
+
+.mr-xs {
+  margin-right: 0.5rem;
+}
+
+.mx-xs {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.my-xs {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.p-xs {
+  padding: 0.5rem;
+}
+
+.pt-xs {
+  padding-top: 0.5rem;
+}
+
+.pb-xs {
+  padding-bottom: 0.5rem;
+}
+
+.pl-xs {
+  padding-left: 0.5rem;
+}
+
+.pr-xs {
+  padding-right: 0.5rem;
+}
+
+.px-xs {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-xs {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.m-sm {
+  margin: 0.75rem;
+}
+
+.mt-sm {
+  margin-top: 0.75rem;
+}
+
+.mb-sm {
+  margin-bottom: 0.75rem;
+}
+
+.ml-sm {
+  margin-left: 0.75rem;
+}
+
+.mr-sm {
+  margin-right: 0.75rem;
+}
+
+.mx-sm {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+.my-sm {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.p-sm {
+  padding: 0.75rem;
+}
+
+.pt-sm {
+  padding-top: 0.75rem;
+}
+
+.pb-sm {
+  padding-bottom: 0.75rem;
+}
+
+.pl-sm {
+  padding-left: 0.75rem;
+}
+
+.pr-sm {
+  padding-right: 0.75rem;
+}
+
+.px-sm {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-sm {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.m-md {
+  margin: 1rem;
+}
+
+.mt-md {
+  margin-top: 1rem;
+}
+
+.mb-md {
+  margin-bottom: 1rem;
+}
+
+.ml-md {
+  margin-left: 1rem;
+}
+
+.mr-md {
+  margin-right: 1rem;
+}
+
+.mx-md {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.my-md {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.p-md {
+  padding: 1rem;
+}
+
+.pt-md {
+  padding-top: 1rem;
+}
+
+.pb-md {
+  padding-bottom: 1rem;
+}
+
+.pl-md {
+  padding-left: 1rem;
+}
+
+.pr-md {
+  padding-right: 1rem;
+}
+
+.px-md {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-md {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.m-lg {
+  margin: 1.5rem;
+}
+
+.mt-lg {
+  margin-top: 1.5rem;
+}
+
+.mb-lg {
+  margin-bottom: 1.5rem;
+}
+
+.ml-lg {
+  margin-left: 1.5rem;
+}
+
+.mr-lg {
+  margin-right: 1.5rem;
+}
+
+.mx-lg {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.my-lg {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.p-lg {
+  padding: 1.5rem;
+}
+
+.pt-lg {
+  padding-top: 1.5rem;
+}
+
+.pb-lg {
+  padding-bottom: 1.5rem;
+}
+
+.pl-lg {
+  padding-left: 1.5rem;
+}
+
+.pr-lg {
+  padding-right: 1.5rem;
+}
+
+.px-lg {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-lg {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.m-xl {
+  margin: 2rem;
+}
+
+.mt-xl {
+  margin-top: 2rem;
+}
+
+.mb-xl {
+  margin-bottom: 2rem;
+}
+
+.ml-xl {
+  margin-left: 2rem;
+}
+
+.mr-xl {
+  margin-right: 2rem;
+}
+
+.mx-xl {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-xl {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.p-xl {
+  padding: 2rem;
+}
+
+.pt-xl {
+  padding-top: 2rem;
+}
+
+.pb-xl {
+  padding-bottom: 2rem;
+}
+
+.pl-xl {
+  padding-left: 2rem;
+}
+
+.pr-xl {
+  padding-right: 2rem;
+}
+
+.px-xl {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-xl {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.m-xxl {
+  margin: 3rem;
+}
+
+.mt-xxl {
+  margin-top: 3rem;
+}
+
+.mb-xxl {
+  margin-bottom: 3rem;
+}
+
+.ml-xxl {
+  margin-left: 3rem;
+}
+
+.mr-xxl {
+  margin-right: 3rem;
+}
+
+.mx-xxl {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.my-xxl {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.p-xxl {
+  padding: 3rem;
+}
+
+.pt-xxl {
+  padding-top: 3rem;
+}
+
+.pb-xxl {
+  padding-bottom: 3rem;
+}
+
+.pl-xxl {
+  padding-left: 3rem;
+}
+
+.pr-xxl {
+  padding-right: 3rem;
+}
+
+.px-xxl {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-xxl {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.gap-0 {
+  gap: 0;
+}
+
+.gap-1 {
+  gap: 4px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-3 {
+  gap: 12px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-5 {
+  gap: 24px;
+}
+
+.gap-6 {
+  gap: 32px;
+}
+
+.gap-7 {
+  gap: 48px;
+}
+
+.gap-8 {
+  gap: 64px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-half {
+  width: 50%;
+}
+
+.w-third {
+  width: 33.3333%;
+}
+
+.w-quarter {
+  width: 25%;
+}
+
+.w-fifth {
+  width: 20%;
+}
+
+.w-sixth {
+  width: 16.6667%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-half {
+  height: 50%;
+}
+
+.h-third {
+  height: 33.3333%;
+}
+
+.h-quarter {
+  height: 25%;
+}
+
+.h-fifth {
+  height: 20%;
+}
+
+.h-sixth {
+  height: 16.6667%;
+}
+
+.box-50 {
+  width: 50px;
+  height: 50px;
+}
+
+.box-75 {
+  width: 75px;
+  height: 75px;
+}
+
+.box-100 {
+  width: 100px;
+  height: 100px;
+}
+
+.box-150 {
+  width: 150px;
+  height: 150px;
+}
+
+.box-200 {
+  width: 200px;
+  height: 200px;
+}
+
+.box-250 {
+  width: 250px;
+  height: 250px;
+}
+
+.box-300 {
+  width: 300px;
+  height: 300px;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-min-screen {
+  height: 100dvh;
+}
+
+.h-max-screen {
+  height: 100lvh;
+}
+
+.max-w-compact {
+  max-width: 576px;
+}
+
+.max-w-comfortable {
+  max-width: 768px;
+}
+
+.max-w-spacious {
+  max-width: 992px;
+}
+
+.max-w-expansive {
+  max-width: 1200px;
+}
+
 .text-xs {
   font-size: 11px;
 }
@@ -113,17 +689,173 @@ meter {
   font-size: 62px;
 }
 
+.text-4xl {
+  font-size: 72px;
+}
+
+.text-xs {
+  font-size: 11px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.text-md {
+  font-size: 18px;
+}
+
+.text-lg {
+  font-size: 26px;
+}
+
+.text-xl {
+  font-size: 36px;
+}
+
+.text-2xl {
+  font-size: 52px;
+}
+
+.text-3xl {
+  font-size: 62px;
+}
+
+.text-4xl {
+  font-size: 72px;
+}
+
+.text-primary {
+  color: #1C2541;
+}
+
+.text-info {
+  color: #647AA3;
+}
+
+.text-secondary {
+  color: #B2AEED;
+}
+
+.text-warning {
+  color: #EDC65F;
+}
+
+.text-danger {
+  color: #8A2525;
+}
+
+.text-success {
+  color: #9CAF88;
+}
+
+.text-warm-beige {
+  color: #E9DCC9;
+}
+
+.text-deep-teal {
+  color: #2A5D67;
+}
+
+.text-vibrant-coral {
+  color: #EE6C4D;
+}
+
+.text-dark-charcoal {
+  color: #293241;
+}
+
+.text-soft-mint {
+  color: #98C1D9;
+}
+
+.text-bright-white {
+  color: #E0FBFC;
+}
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "font-inter", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "font-fira-code", monospace;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 62px;
+}
+
+h3 {
+  font-size: 52px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 26px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+h4, h5, h6 {
+  font-weight: 600;
+}
+
+.radius-flat {
+  border-radius: 0;
+}
+
+.radius-subtle {
+  border-radius: 2px;
+}
+
+.radius-gentle {
+  border-radius: 4px;
+}
+
+.radius-rounded {
+  border-radius: 8px;
+}
+
+.radius-soft {
+  border-radius: 12px;
+}
+
+.radius-pill {
+  border-radius: 16px;
+}
+
+.radius-circle {
+  border-radius: 50%;
+}
+
+.radius-rounded-full {
+  border-radius: 9999px;
+}
+
+body {
+  font-family: "font-inter", sans-serif;
 }
 
 h1 {
   font-size: 4rem;
   font-weight: 800;
-}
-
-.code-example {
-  font-family: "Fira Code", monospace;
 }
 
 /*# sourceMappingURL=sassflow.css.map */

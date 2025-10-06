@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../variables/sizing' as sizing;
+
+.container {
+  width: map.get(sizing.$width,'full');
+  padding: map.get(sizing.$space-scale, '4');
+}
+
+section {
+  padding-top: map.get(sizing.$space-scale, '3');
+  padding-bottom: map.get(sizing.$space-scale, '3');
+}   

@@ -1,9 +1,187 @@
-$font-sizes : (
-    'xs': 11px,
-    'sm': 14px,
-    'md': 18px,
-    'lg': 26px,
-    'xl': 36px,
-    '2xl': 52px,
-    '3xl': 62px,
+@use '../variables/theme';
+
+//Map for font-size 
+$font-sizes: (
+  "xs": 11px,
+  "sm": 14px,
+  "md": 18px,
+  "lg": 26px,
+  "xl": 36px,
+  "2xl": 52px,
+  "3xl": 62px,
+  "4xl": 72px
 );
+
+// Spacing scale
+$space-scale: (
+  none: 0,
+  xs: 0.5rem,    // 8px
+  sm: 0.75rem,   // 12px
+  md: 1rem,      // 16px
+  lg: 1.5rem,    // 24px
+  xl: 2rem,      // 32px
+  xxl: 3rem      // 48px
+);
+
+// margin auto utilities
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Margin and Padding utilities
+@each $name, $value in $space-scale {
+    // Margin
+    .m-#{$name} { margin: $value; }
+    .mt-#{$name} { margin-top: $value; }
+    .mb-#{$name} { margin-bottom: $value; }
+    .ml-#{$name} { margin-left: $value; }
+    .mr-#{$name} { margin-right: $value; }
+    .mx-#{$name} { margin-left: $value; margin-right: $value; }
+    .my-#{$name} { margin-top: $value; margin-bottom: $value; }
+    
+    // Padding
+    .p-#{$name} { padding: $value; }
+    .pt-#{$name} { padding-top: $value; }
+    .pb-#{$name} { padding-bottom: $value; }
+    .pl-#{$name} { padding-left: $value; }
+    .pr-#{$name} { padding-right: $value; }
+    .px-#{$name} { padding-left: $value; padding-right: $value; }
+    .py-#{$name} { padding-top: $value; padding-bottom: $value; }
+}
+
+$radius: (
+  flat: 0,
+  subtle: 2px,
+  gentle: 4px,
+  rounded: 8px,
+  soft: 12px,
+  pill: 16px,
+  circle: 50%,
+  rounded-full: 9999px
+);
+
+
+// Layout sizes - different scale
+$dimensions: (
+  tiny: 4rem,     // 64px
+  small: 6rem,    // 96px  
+  medium: 8rem,   // 128px
+  large: 12rem,   // 192px
+  xlarge: 16rem,  // 256px
+  giant: 24rem    // 384px
+);
+
+//Gap spacing
+.gap-0{ gap: 0; }
+.gap-1{ gap: 4px; }
+.gap-2{ gap: 8px; }
+.gap-3{ gap: 12px; }
+.gap-4{ gap: 16px; }
+.gap-5{ gap: 24px; }
+.gap-6{ gap: 32px; }
+.gap-7{ gap: 48px; }
+.gap-8{ gap: 64px; }
+
+//Height and Width
+$fixed-sizes: (
+  50: 50px,
+  75: 75px,
+  100: 100px,
+  150: 150px,
+  200: 200px,
+  250: 250px,
+  300: 300px,
+);
+
+//map for  width and height
+$width: (
+    full: 100%,
+    half: 50%,
+    third: 33.3333%,
+    quarter: 25%,
+    fifth: 20%,
+    sixth: 16.6667%
+);
+$height: (
+    full: 100%,
+    half: 50%,
+    third: 33.3333%,
+    quarter: 25%,
+    fifth: 20%,
+    sixth: 16.6667%
+);
+
+$special-height: (
+    screen: 100vh,
+    min-screen: 100dvh,
+    max-screen: 100lvh
+);
+
+$max-widths: (
+  full: 100%,
+  screen-sm: 640px,
+  screen-md: 768px,
+  screen-lg: 1024px,
+  screen-xl: 1280px
+);
+
+// Max widths - different breakpoints
+$container-sizes: (
+  compact: 576px,
+  comfortable: 768px, 
+  spacious: 992px,
+  expansive: 1200px
+);
+
+//  width utilities
+@each $name, $value in $width {
+  .w-#{$name} {
+    width: $value;
+  }
+}
+// height utilities
+@each $name, $value in $height {
+  .h-#{$name} {
+    height: $value;
+  }
+}
+// box utilities for width and height 
+@each $name, $value in $fixed-sizes {
+    .box-#{$name} {
+        width: $value;
+        height: $value;
+    }
+}
+//  special height utilities
+@each $name, $value in $special-height {
+  .h-#{$name} {
+    height: $value;
+  }
+}
+
+// container max-width utilities
+@each $name, $value in $container-sizes {
+  .max-w-#{$name} {
+    max-width: $value;
+  }
+}
+
+// Font size utilities
+@each $name, $size in $font-sizes {
+  .text-#{$name} {
+    font-size: $size;
+  }
+}
+// Sizing map to be used in other files
+$sizing: (
+  'font-sizes': $font-sizes,
+  'space-scale': $space-scale,
+  'dimensions': $dimensions,
+  'fixed-sizes': $fixed-sizes,
+  'width': $width,
+  'height': $height,
+  'special-height': $special-height,
+  'container-sizes': $container-sizes
+);
+
