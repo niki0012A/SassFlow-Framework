@@ -1,94 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-/***
-    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
-    GitHub page: https://github.com/elad2412/the-new-css-reset
-***/
-*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-  all: unset;
-  display: revert;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-a, button {
-  cursor: revert;
-}
-
-ol, ul, menu, summary {
-  list-style: none;
-}
-
-ol {
-  counter-reset: revert;
-}
-
-img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-input, textarea {
-  -webkit-user-select: auto;
-}
-
-textarea {
-  white-space: revert;
-}
-
-meter {
-  -webkit-appearance: revert;
-  appearance: revert;
-}
-
-:where(pre) {
-  all: revert;
-  box-sizing: border-box;
-}
-
-::placeholder {
-  color: unset;
-}
-
-:where([hidden]) {
-  display: none;
-}
-
-:where([contenteditable]:not([contenteditable=false])) {
-  -moz-user-modify: read-write;
-  -webkit-user-modify: read-write;
-  overflow-wrap: break-word;
-  -webkit-line-break: after-white-space;
-  -webkit-user-select: auto;
-}
-
-:where([draggable=true]) {
-  -webkit-user-drag: element;
-}
-
-:where(dialog:modal) {
-  all: revert;
-  box-sizing: border-box;
-}
-
-::-webkit-details-marker {
-  display: none;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -854,6 +765,98 @@ h5, h6 {
 
 p {
   font-size: 14px;
+}
+
+ul,
+ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  font-family: "font-inter", sans-serif;
+  line-height: 1.6;
+  color: #293241;
+}
+
+ul {
+  list-style-type: disc;
+}
+ul li {
+  margin-bottom: 0.5rem;
+}
+ul li::marker {
+  color: #2A5D67;
+  font-size: 1.1em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+ol li {
+  margin-bottom: 0.5rem;
+}
+ol li::marker {
+  color: #EE6C4D;
+  font-weight: 600;
+}
+
+ul ul,
+ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+ul ul li::marker,
+ol ol li::marker {
+  color: #9CAF88;
+}
+
+.list-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-inline li {
+  display: inline-block;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+.list-inline li:last-child {
+  margin-right: 0;
+}
+
+.list-bordered {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #647AA3;
+}
+.list-bordered li {
+  border-bottom: 1px solid #647AA3;
+  padding: 0.75rem 0;
+}
+
+.list-steps {
+  counter-reset: step;
+}
+.list-steps li {
+  counter-increment: step;
+  position: relative;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-weight: 500;
+}
+.list-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  background-color: #2A5D67;
+  color: #E0FBFC;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-primary {
