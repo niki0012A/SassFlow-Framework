@@ -10,18 +10,10 @@
 @use "./align";
 @use "./justify";
 @use "./images";
+@use "./layout";
 
 
 
-
-body {
-    font-family: variables.$font-family-body;   
-}
-
-h1 {
-    font-size: 4rem;
-    font-weight: 800;
-}
 
 // .code-example {
 //     font-family: variables.$font-code;

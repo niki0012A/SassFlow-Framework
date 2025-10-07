@@ -1,0 +1,56 @@
+@use 'sass:map';
+@use '../variables/theme' as theme;
+@use '../variables/sizing' as sizing;
+@use '../fonts/index' as fonts;
+@use '../variables/index' as variables;
+@use '../variables/typography' as typography;
+
+
+body {
+    font-family: typography.$font-family-body;
+    line-height: typography.$line-height-base;
+    font-weight: typography.$fw-regular;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: typography.$font-family-heading;
+    line-height: typography.$line-height-heading;
+}
+
+h1 {
+    font-size: map.get(sizing.$font-sizes, '4xl');
+}
+
+h2 {
+    font-size: map.get(sizing.$font-sizes, '3xl');
+}
+
+h3 {
+    font-size: map.get(sizing.$font-sizes, '2xl');
+}
+
+h4 {
+    font-size: map.get(sizing.$font-sizes, 'xl');
+}
+
+h5 {
+    font-size: map.get(sizing.$font-sizes, 'lg');
+}
+
+h6 {
+    font-size: map.get(sizing.$font-sizes, 'md');
+}
+
+h1,h2 {
+    font-weight: typography.$fw-bold;
+}
+h3,h4 {
+    font-weight: typography.$fw-semibold;
+}
+
+h5,h6 {
+    font-weight: typography.$fw-medium;
+}
+p {
+    font-size: map.get(sizing.$font-sizes, 'xs');
+    }

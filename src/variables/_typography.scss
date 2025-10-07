@@ -37,25 +37,3 @@ $line-height-heading: 1.2;
         color: $color;
     }
 }
-
-body {
-    font-family: $font-family-body;
-    line-height: $line-height-base;
-    font-weight: $fw-regular;
-    font-size: map.get(sizing.$font-sizes, 'md');
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-heading;
-    line-height: $line-height-heading;
-}
-
-h1 { font-size: map.get(sizing.$font-sizes, '4xl'); }
-h2 { font-size: map.get(sizing.$font-sizes, '3xl'); }
-h3 { font-size: map.get(sizing.$font-sizes, '2xl'); }
-h4 { font-size: map.get(sizing.$font-sizes, 'xl'); }
-h5 { font-size: map.get(sizing.$font-sizes, 'lg'); }
-h6 { font-size: map.get(sizing.$font-sizes, 'md'); }
-h1, h2, h3 { font-weight: $fw-bold; }
-h4, h5, h6 { font-weight: $fw-semibold; }       
-
