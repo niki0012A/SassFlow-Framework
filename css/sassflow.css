@@ -662,15 +662,15 @@ meter {
 }
 
 .text-xs {
-  font-size: 11px;
-}
-
-.text-sm {
   font-size: 14px;
 }
 
-.text-md {
+.text-sm {
   font-size: 18px;
+}
+
+.text-md {
+  font-size: 20px;
 }
 
 .text-lg {
@@ -682,27 +682,27 @@ meter {
 }
 
 .text-2xl {
-  font-size: 52px;
+  font-size: 44px;
 }
 
 .text-3xl {
-  font-size: 62px;
+  font-size: 52px;
 }
 
 .text-4xl {
-  font-size: 72px;
+  font-size: 66px;
 }
 
 .text-xs {
-  font-size: 11px;
-}
-
-.text-sm {
   font-size: 14px;
 }
 
-.text-md {
+.text-sm {
   font-size: 18px;
+}
+
+.text-md {
+  font-size: 20px;
 }
 
 .text-lg {
@@ -714,15 +714,15 @@ meter {
 }
 
 .text-2xl {
-  font-size: 52px;
+  font-size: 44px;
 }
 
 .text-3xl {
-  font-size: 62px;
+  font-size: 52px;
 }
 
 .text-4xl {
-  font-size: 72px;
+  font-size: 66px;
 }
 
 .text-primary {
@@ -773,50 +773,6 @@ meter {
   color: #E0FBFC;
 }
 
-body {
-  font-family: "font-inter", sans-serif;
-  line-height: 1.6;
-  font-weight: 400;
-  font-size: 18px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "font-fira-code", monospace;
-  line-height: 1.2;
-}
-
-h1 {
-  font-size: 72px;
-}
-
-h2 {
-  font-size: 62px;
-}
-
-h3 {
-  font-size: 52px;
-}
-
-h4 {
-  font-size: 36px;
-}
-
-h5 {
-  font-size: 26px;
-}
-
-h6 {
-  font-size: 18px;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-h4, h5, h6 {
-  font-weight: 600;
-}
-
 .radius-flat {
   border-radius: 0;
 }
@@ -851,11 +807,104 @@ h4, h5, h6 {
 
 body {
   font-family: "font-inter", sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "font-fira-code", monospace;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 66px;
+}
+
+h2 {
+  font-size: 52px;
+}
+
+h3 {
+  font-size: 44px;
+}
+
+h4 {
+  font-size: 36px;
+}
+
+h5 {
+  font-size: 26px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h3, h4 {
+  font-weight: 600;
+}
+
+h5, h6 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 14px;
+}
+
+.button-primary {
+  background-color: #1C2541;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #647AA3;
+  transition: background-color 0.3s ease;
+}
+
+.button-secondary {
+  background-color: #B2AEED;
+  color: #1C2541;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  background-color: #98C1D9;
+  transition: background-color 0.3s ease;
+}
+
+.button-warning {
+  background-color: #8A2525;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.2rem;
+  font-size: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-warning:hover {
+  background-color: #c05858;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=sassflow.css.map */
