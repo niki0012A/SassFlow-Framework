@@ -19,6 +19,8 @@ SassFlow uses a theme-first approach, with centralized variables and utility cla
 
 ---
 ```
+## 📁 Project Structure
+
 📦 SASSFLOW-FRAMEWORK/
 ├── 📂 css
 │   └── sassflow.css                  # Compiled CSS file
