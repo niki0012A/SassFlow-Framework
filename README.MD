@@ -2,8 +2,6 @@
 
 **Sassflow** is a small framework that includes all the essential basic customizations. This framework was created for educational purposes to help us practice the workflow of working with Sass.
 
----
-
 ## Authors
 
 **Sassflow** was created as part of an academic project focused on CSS architecture, modular design systems, and Sass-based development.
@@ -33,6 +31,34 @@ Created by:
 ## Features
 
 ## USAGE
+### Typography Features
+
+- Uses global variables for font families, weights, and sizes from `/variables/typography` and `/variables/sizing`.
+- Consistent vertical rhythm and hierarchy for headings.
+- Supports quick theme customization through Sass maps and variable imports.
+
+| Class                                                 | Description                          |
+| ----------------------------------------------------- | ------------------------------------ |
+| `h1, h2, h3, h4, h5, h6`                              | Defines consistent heading hierarchy |
+| `p`                                                   | Sets base paragraph font size        |
+| `$font-family-body`                                   | Controls main body font              |
+| `$font-family-heading`                                | Controls heading font                |
+| `$font-sizes`                                         | Sass map defining all font sizes     |
+| `$fw-medium`, `$fw-semibold`, `$fw-bold`              | Font-weight system                   |
+
+
+### Buttons
+- Uses theme, colors, and typography variables for full consistency
+- Includes hover transitions and responsive font sizing
+- Easy to extend with additional button variants
+
+| Class                    | Description                                  |
+| ------------------------ | -------------------------------------------- |
+| `.button-primary`        | Primary button for main actions              |
+| `.button-secondary`      | Secondary or subtle action button            |
+| `.button-warning`        | Warning or destructive action button         |
+| `:hover`                 | Smooth hover transition between theme colors |
+
 
 
 ### TABLE
