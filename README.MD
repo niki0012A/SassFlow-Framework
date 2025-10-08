@@ -1,14 +1,13 @@
 # SASSFLOW Framework
 
-**Sassflow** is a small framework that includes all the essential basic customizations. This framework was created for educational purposes to help us practice the workflow of working with Sass.
+**SassFlow** is a modern, comprehensive CSS framework built using Sass. It offers a scalable, modular architecture that makes it easy to create customizable UI components and utility classes. Designed to streamline and improve the consistency of web development projects, this framework was developed for educational purposes to practice and demonstrate the workflow of working with Sass.
 
 ## Authors
 
-**Sassflow** was created as part of an academic project focused on CSS architecture, modular design systems, and Sass-based development.
+This project was created as an academic collaboration focused on CSS architecture, modular design systems, and Sass-driven development.
 
-Created by:  
 - Anna Nikiforova
-- Faoziyyah Busari 
+- Faoziyyah Busari
 - Satellite Nongmaithem
 - Anuj Singh
 
@@ -16,13 +15,47 @@ Created by:
 
 ## Overview
 
-
+SassFlow uses a theme-first approach, with centralized variables and utility classes for layout, spacing, colors, and typography. Built entirely with Sass, it enables easy customization through maps and variables, while maintaining scalability and clean code organization across projects.
 
 ---
 
 ## 📁 Project Structure
-
-
+📦 sassflow
+├── 📂 css
+│   └── sassflow.css                  # Compiled CSS file
+├── 📂 src
+│   ├── 📂 base                      # Base styles including components and utilities
+│   │   ├── align.scss
+│   │   ├── alignments.scss
+│   │   ├── buttons.scss
+│   │   ├── forms.scss
+│   │   ├── headings.scss
+│   │   ├── images.scss
+│   │   ├── flex.scss               
+│   │   ├── justify.scss
+│   │   ├── layout.scss
+│   │   ├── lists.scss
+│   │   ├── tables.scss
+│   │   ├── typography.scss
+│   │   ├── utilities.scss
+│   │   └── index.scss               # Imports all base partials
+│   ├── 📂 font                      # Fonts
+│   │   ├── font-inter.scss
+│   │   ├── font-fira-code.scss
+│   │   └── index.scss               # Imports all font partials
+│   ├── 📂 reset                     # Reset styles
+│   │   └── reset.scss
+│   ├── 📂 variables                 # Theme variables and Sass maps
+│   │   ├── colors.scss
+│   │   ├── radius.scss
+│   │   ├── sizing.scss
+│   │   ├── theme.scss
+│   │   └── typography.scss
+│   │   ├── index.scss              # Imports all variables partials
+│   │  
+│   ├── sassflow.scss               # Main Sass entry file importing all src partials
+├── index.html                      # Showcase/demo page
+└── README.md                       # Documentation
 
 
 
@@ -30,242 +63,180 @@ Created by:
 
 ## Features
 
-## USAGE
-### Typography Features
+- **Sass & Partials Architecture**  
+  Modular partials keep styles organized for maintainability and reuse.
 
-- Uses global variables for font families, weights, and sizes from `/variables/typography` and `/variables/sizing`.
-- Consistent vertical rhythm and hierarchy for headings.
-- Supports quick theme customization through Sass maps and variable imports.
+- **Custom Theming with Sass Maps**  
+  Define semantic color roles (`primary`, `secondary`, `danger`, `info`, etc.) centrally to ensure consistent UI themes.
 
-| Class                                                 | Description                          |
-| ----------------------------------------------------- | ------------------------------------ |
-| `h1, h2, h3, h4, h5, h6`                              | Defines consistent heading hierarchy |
-| `p`                                                   | Sets base paragraph font size        |
-| `$font-family-body`                                   | Controls main body font              |
-| `$font-family-heading`                                | Controls heading font                |
-| `$font-sizes`                                         | Sass map defining all font sizes     |
-| `$fw-medium`, `$fw-semibold`, `$fw-bold`              | Font-weight system                   |
+- **Comprehensive Utility Classes**   
+  Utilities cover spacing, backgrounds, borders, typography, layout (flexbox), display, and sizing.
 
+- **Well-Styled Base HTML Elements**  
+  Forms, tables, headings, lists, images, and more receive consistent, theme-based styling.
+
+- **Responsive Flexbox & Grid Systems**  
+  Robust support for flexible layouts with alignment, justification, and wrapping utilities.
+
+- **Easy to Customize**  
+  Modify variables and maps under `/src/variables/` to personalize the theme and spacing.
+
+- **Modern Sass Syntax**  
+  Uses `@use` and `@forward` for modular, maintainable stylesheets.
+
+- **Scalable Design System**  
+  Combines components and utilities to maintain visually balanced interfaces.
+
+---
+
+
+## Usage
+
+Use  the framework’s components and utilities within your HTML effortlessly.
 
 ### Buttons
-- Uses theme, colors, and typography variables for full consistency
-- Includes hover transitions and responsive font sizing
-- Easy to extend with additional button variants
+- Themed colors and typography variables
+- Responsive font sizes and hover transitions
+- Classes: `.button-primary`, `.button-secondary`, `.button-warning`
 
-| Class                    | Description                                  |
-| ------------------------ | -------------------------------------------- |
-| `.button-primary`        | Primary button for main actions              |
-| `.button-secondary`      | Secondary or subtle action button            |
-| `.button-warning`        | Warning or destructive action button         |
-| `:hover`                 | Smooth hover transition between theme colors |
+```html
+<button class="btn-primary">Primary</button>
+<a href="#" class="btn-pink">Link Button</a>
+```
 
+### Typography
+- Utilizes global variables for font families, weights, and sizes.
+- Ensures vertical rhythm and heading hierarchy.
+- Quick theme changes via Sass maps.
 
+Example classes: `h1, h2, h3, p`, `.text-primary`, `.font-sz-lg`
 
-### TABLE
-The .table class provides a styled base for any HTML <table>.
-<table class="table">
-  <thead>
-    <tr>
-      <th>Month</th>
-      <th>Sales</th>
-      <th>Growth</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>January</td>
-      <td>$5,400</td>
-      <td>+8%</td>
-    </tr>
-    <tr>
-      <td>February</td>
-      <td>$6,200</td>
-      <td>+15%</td>
-    </tr>
-  </tbody>
-</table>
+```html
+<h1 class="text-primary font-sz-3xl">Heading</h1>
+<p class="text-dark font-sz-sm">Paragraph text</p>
+```
 
-Modifier classes:
-| Class                                                               | Description                                   |
-| ------------------------------------------------------------------- | --------------------------------------------- |
-| `.table--bordered`                                                  | Adds a border around all cells                |
-| `.table--striped`                                                   | Alternates row background colors              |
-| `.table--hover`                                                     | Highlights rows on hover                      |
-| `.table--sm`, `.table--lg`, `.table--xl`                            | Adjusts cell padding                          |
-| `.table--compact`, `.table--dense`                                  | Reduces vertical spacing                      |
-| `.table--align-top`, `.table--align-middle`, `.table--align-bottom` | Controls vertical alignment                   |
-| `.table-responsive`                                                 | Enables horizontal scrolling on small screens |
+### Spacing Utilities
+Display utilities: `.d-block`, `.d-flex`, `.d-grid`  
+Flex utilities: `.flex`, `.flex-row`, `.items-center`, `.justify-between`  
+Spacing: `.p-4`, `.m-3`, `.gap-3`  
+Positioning: `.relative`, `.absolute`, `.z-10`  
+Visibility, text alignment, shadows, backgrounds, borders, and more.
 
+```html
+<div class="p-4 mb-3">Box with padding and margin</div>
+```
 
+### Layout with Flexbox
 
+```html
+<div class="flex flex-wrap gap-3 justify-center align-center">
+  <div class="box-150 bg-primary"></div>
+  <div class="box-150 bg-secondary"></div>
+</div>
+```
 
-### FORMS
+### Tables
 
-<form class="form">
-  <div class="form-field">
-    <label class="form-label" for="email">Email</label>
-    <input type="email" id="email" class="form-control" placeholder="name@example.com" required />
-    <span class="form-help">We’ll never share your email.</span>
-  </div>
+Base table styling with modifiers for borders, stripes, hover states, sizing, alignment, and responsive behavior.
 
-  <div class="form-field">
-    <label class="form-label">Message</label>
-    <textarea class="form-control" rows="4"></textarea>
-  </div>
+Example modifiers: `.table--bordered`, `.table--striped`, `.table--compact`
 
-  <div class="form-actions">
-    <button class="btn btn-primary">Submit</button>
-  </div>
+### Forms
+Well-designed form elements with visual variants and validation states.
+
+Modifiers include `.is-sm`, `.is-lg`, `.is-outline`, `.is-filled`, `.is-error`, `.form-horizontal`, `.input-group`, `.switch`
+
+```html
+<form>
+  <label for="name">Name</label>
+  <input type="text" id="name" class="p-3">
+
+  <label for="message">Message</label>
+  <textarea id="message" class="p-3"></textarea>
+
+  <button type="submit" class="btn-success">Send</button>
 </form>
 
-Modifiers
-| Modifier                                         | Description                                           |
-| ------------------------------------------------ | ----------------------------------------------------- |
-| `.is-sm`, `.is-lg`                               | Size variants for inputs                              |
-| `.is-outline`, `.is-filled`, `.is-ghost`         | Visual style variants                                 |
-| `.is-error`, `.has-error`, `.is-success`         | Validation states                                     |
-| `.form-horizontal`                               | Two-column layout with labels and inputs side-by-side |
-| `.input-group`, `.addon`                         | Combine inputs and add-ons                            |
-| `.input-with-icon`                               | Position icons inside input fields                    |
-| `.switch`, `.control-radio`, `.control-checkbox` | Custom controls                                       |
-| `.input-file`                                    | Styled file uploader                                  |
-| `.form-help`, `.error-text`, `.success-text`     | Helper and feedback text                              |
 
+```
+### Images
 
-### UTILITIES
+Responsive images and shape classes:
 
-Display
-<div class="d-none"></div>
-<div class="d-block"></div>
-<span class="d-inline"></span>
-<span class="d-inline-block"></span>
-<div class="d-flex"></div> 
-<div class="d-grid"></div>
+- `.img-fluid`, `.img-circle`, `.img-rounded`  
+- Object fit and position utilities  
+- Aspect ratios with `.aspect-video`  
+- Filters and hover effects  
 
-Gaps (axis-specific; works with flex or grid)
-<div class="d-flex gap-x-sm gap-y-xs">…</div>
+---
 
-Position & Layering
-<div class="relative">
-  <span class="absolute top-0 right-0 z-20">…</span>
-</div>
+## Installation
 
-Overflow & Object Fit
-<div class="overflow-hidden">…</div>
-<img class="object-cover" src="hero.jpg" alt="">
+To install and start using the Framework:
 
-Visibility & Cursor
-<button class="pointer">Clickable</button>
-<span class="sr-only">Screen reader text</span>
+### 1. Clone or Download the repository
 
-Text helpers
-<p class="text-center uppercase no-wrap truncate">…</p>
-<p class="fw-semibold leading-relaxed">…</p>
+```bash
+git clone https://github.com/your-username/sassflow-framework.git
+```
 
-Background & Border colors (theme-mapped)
-<div class="bg-primary border-danger">…</div>
-<div class="bg-muted border-2 border-dashed">…</div>
+### 2. Include the compiled CSS file 
+Add the compiled CSS file to your HTML:
 
-Shadows
-<div class="shadow-sm"></div>
-<div class="shadow-lg"></div>
+```html
+<link rel="stylesheet" href="./css/sassflow.css">
+```
 
-Containers
-<section class="container container-comfortable">…</section>
+### 3. Compile Sass (for customization)
 
-Aspect Ratios
-<div class="aspect-video">
-  <iframe …></iframe>
-</div>
+If you modify any Sass source files, recompile with:
 
-Opacity
-<div class="opacity-50">Faded</div>
+```bash
+sass --watch src/main.scss css/sassflow.css
+```
 
+---
+---
 
-### FLEX
+## Customization
 
-Flex Container
-<div class="flex flex-row">
-  <div>Item 1</div>
-  <div>Item 2</div>
-</div>
+Edit Sass variables and theme maps located in `/src/variables/`  to update colors, fonts, spacing, sizing, and component styles:  
 
-<div class="inline-flex flex-col">
-  <span>Child A</span>
-  <span>Child B</span>
-</div>
+- **_colors.scss** – Define color palette
+- **_theme.scss** –  Assign semantic color roles (`primary`, `danger`, `info`.),  
+- **_sizing.scss** – Manage spacing, sizing, and responsive classes 
+- **_typography.scss** – Configure fonts, weights, and size utilities
 
-Direction & Wrapping
-<div class="flex flex-col-reverse flex-wrap">
-  <div>Box A</div>
-  <div>Box B</div>
-</div>
+After updates, recompile Sass:
 
-Align Items & Self
-<div class="flex items-center">
-  <img src="icon.svg" alt="">
-  <p class="self-end">Aligned bottom</p>
-</div>
+```bash
+sass src/main.scss css/sassflow.css
+```
 
-Grow, Shrink, and Flex Basis
-<div class="flex">
-  <div class="grow">Expands to fill</div>
-  <div class="grow-0 basis-200">Fixed 200px width</div>
-</div>
+---
+## Tips
 
-Order
-<div class="flex">
-  <div class="order-2">Second</div>
-  <div class="order-1">First</div>
-</div>
+- Utility classes like `.w-150`, `.h-100`, `.gap-3`, `.radius-md`, `.text-success` are dynamically from Sass maps.
+-Combine utilities such as `.box-150`, `.font-sz-xl`, `.radius-lg`, and `.bg-primary`. for consistent styling. 
+-Typography, layout, colors, and buttons sync globally via variables for easy theme adjustments.
+- The design system is scalable: update one variable, and the entire framework adapts.
+- Default HTML elements are styled cohesively without extra CSS.
 
+---
+## Live Demo
 
-### JUSTIFY
+Open `index.html` in a browser to explore the full showcase of components, utilities, and core features.
 
-Justify Content (Main Axis)
-<div class="flex justify-between">
-  <div>Left</div>
-  <div>Right</div>
-</div>
+---
+## Requirements
 
-<div class="flex justify-center">
-  <p>Centered horizontally</p>
-</div>
+- Sass installed (`npm install -g sass`) or use the **Live Sass Compiler** in your IDE.
+- Modern browser for preview.
+- Basic understanding of Sass and HTML.
+- Dart Sass recommended for @use and @forward support.
 
-Align Content (Cross Axis for Multi-Line Flex)
-<div class="flex flex-wrap content-around">
-  <div>Box A</div>
-  <div>Box B</div>
-  <div>Box C</div>
-</div>
+---
+## License
 
-### IMAGES
-
-Responsive Images
-<img src="team.jpg" alt="Team" class="img-fluid">
-<img src="banner.jpg" alt="Banner" class="img-full">
-
-Shape Utilities
-<img src="avatar.jpg" alt="User" class="img-circle">
-<img src="product.jpg" alt="Item" class="img-rounded img-shadow">
-
-Borders & Shadows
-<img src="logo.png" alt="Logo" class="img-border-primary img-shadow-lg">
-
-Object Fit & Position
-<img src="cover.jpg" alt="Cover" class="object-cover object-center">
-
-Aspect Ratios
-<div class="aspect-video">
-  <img src="video-thumbnail.jpg" class="object-cover" alt="Video">
-</div>
-
-Filters & Effects
-<img src="portrait.jpg" class="img-grayscale img-hover-zoom" alt="Stylized Portrait">
-
-Framed Image
-<div class="img-frame">
-  <img src="photo.jpg" class="img-fluid" alt="Framed">
-</div>
-
-
+This project is open source and free for personal and educational use.
