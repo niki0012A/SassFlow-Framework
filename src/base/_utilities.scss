@@ -1,1 +1,160 @@
+@use 'sass:map';
+@use '../variables/sizing' as sizing;
+@use '../variables/colors' as colors;
+@use '../variables/typography' as type;
+@use '../variables/theme' as theme;
+
+/* ===============================
+   Display (keep minimal; flex behaviors live in _flex.scss)
+   =============================== */
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }      
+.d-grid { display: grid !important; }
+
+/* ===============================
+   Gap (axis helpers; works for both grid & flex)
+   =============================== */
+@each $k, $v in sizing.$space-scale {
+  .gap-x-#{$k} { column-gap: $v; }
+  .gap-y-#{$k} { row-gap: $v; }
+}
+
+/* ===============================
+   Positioning & Layering
+   =============================== */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+.top-0 { top: 0; } .right-0 { right: 0; } .bottom-0 { bottom: 0; } .left-0 { left: 0; }
+
+.z-0 { z-index: 0; }
+.z-10 { z-index: 10; }
+.z-20 { z-index: 20; }
+.z-30 { z-index: 30; }
+.z-40 { z-index: 40; }
+.z-50 { z-index: 50; }
+
+/* ===============================
+   Overflow & Object Fit
+   =============================== */
+.overflow-hidden { overflow: hidden; }
+.overflow-auto { overflow: auto; }
+.overflow-scroll { overflow: scroll; }
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.object-fill { object-fit: fill; }
+.object-none { object-fit: none; }
+
+/* ===============================
+   Visibility & Cursor
+   =============================== */
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.pointer { cursor: pointer; }
+.not-allowed { cursor: not-allowed; }
+
+/* ===============================
+   Text helpers (complements typography)
+   =============================== */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.no-wrap { white-space: nowrap; }
+
+.truncate {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* Font weights (from your typography tokens) */
+.fw-thin { font-weight: type.$fw-thin; }
+.fw-extralight { font-weight: type.$fw-extralight; }
+.fw-light { font-weight: type.$fw-light; }
+.fw-regular { font-weight: type.$fw-regular; }
+.fw-medium { font-weight: type.$fw-medium; }
+.fw-semibold { font-weight: type.$fw-semibold; }
+.fw-bold { font-weight: type.$fw-bold; }
+.fw-extrabold { font-weight: type.$fw-extrabold; }
+.fw-black { font-weight: type.$fw-black; }
+
+.leading-base { line-height: type.$line-height-base; }
+.leading-heading { line-height: type.$line-height-heading; }
+.leading-tight { line-height: 1.25; }
+.leading-relaxed { line-height: 1.7; }
+
+/* ===============================
+   Background & Border colors (theme-driven)
+   =============================== */
+@each $name, $val in theme.$theme {
+  .bg-#{$name} { background-color: $val; }
+  .border-#{$name} { border-color: $val; }
+}
+
+/* Neutral background helpers */
+.bg-white { background-color: colors.$bright-white; }
+.bg-muted { background-color: colors.$soft-mint; }
+
+/* ===============================
+   Borders & Outline (radius lives in _radius.scss)
+   =============================== */
+.border { border: 1px solid colors.$soft-mint; }
+.border-0 { border: 0; }
+.border-2 { border-width: 2px; border-style: solid; }
+.border-dashed { border-style: dashed; }
+.border-dotted { border-style: dotted; }
+
+.outline-none { outline: none; }
+.focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 93, 103, .18); 
+}
+
+/* ===============================
+   Shadows
+   =============================== */
+.shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.shadow { box-shadow: 0 4px 10px rgba(0,0,0,.12); }
+.shadow-lg { box-shadow: 0 10px 24px rgba(0,0,0,.16); }
+
+/* ===============================
+   Containers (pairs with sizing container map)
+   =============================== */
+.container {
+  width: 100%;
+  margin-left: auto; margin-right: auto;
+  padding-left: map.get(sizing.$space-scale, md);
+  padding-right: map.get(sizing.$space-scale, md);
+}
+.container-compact { max-width: map.get(sizing.$container-sizes, compact); margin-inline: auto; }
+.container-comfortable { max-width: map.get(sizing.$container-sizes, comfortable); margin-inline: auto; }
+.container-spacious { max-width: map.get(sizing.$container-sizes, spacious); margin-inline: auto; }
+.container-expansive { max-width: map.get(sizing.$container-sizes, expansive); margin-inline: auto; }
+
+/* ===============================
+   Aspect Ratios (native)
+   =============================== */
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-photo { aspect-ratio: 4 / 3; }
+
+/* ===============================
+   Opacity
+   =============================== */
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: .25; }
+.opacity-50 { opacity: .5; }
+.opacity-75 { opacity: .75; }
+.opacity-100 { opacity: 1; }
 

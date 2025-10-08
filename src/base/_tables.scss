@@ -1,0 +1,94 @@
+@use 'sass:map';
+@use '../variables/theme' as theme;
+@use '../variables/sizing' as sizing;
+
+/* Base table (classed) */
+.table,
+table.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: #fff;
+
+  th, td {
+  padding: map.get(sizing.$space-scale, sm);
+  border-bottom: 1px solid map.get(theme.$theme, soft-mint);
+  text-align: left;
+  vertical-align: middle;
+  }
+
+  thead th {
+    font-weight: 700;
+    color: map.get(theme.$theme, 'primary');
+    border-bottom: 2px solid map.get(theme.$theme, 'soft-mint');
+  }
+
+  tfoot th, tfoot td {
+    border-top: 2px solid map.get(theme.$theme, 'soft-mint');
+    font-weight: 600;
+  }
+}
+
+/* Sizes */
+.table--sm th, .table--sm td { padding: map.get(sizing.$space-scale, xs); }
+.table--lg th, .table--lg td { padding: map.get(sizing.$space-scale, lg); }
+.table--xl th, .table--xl td { padding: map.get(sizing.$space-scale, xl); }
+
+/* Bordered */
+.table--bordered,
+table.table--bordered {
+  th, td { border: 1px solid map.get(theme.$theme, 'soft-mint'); }
+  thead th { border-bottom-width: 2px; }
+}
+
+/* Striped (tbody only) */
+.table--striped tbody tr:nth-child(odd) {
+  background-color: map.get(theme.$theme, 'bright-white');
+}
+
+/* Hoverable rows */
+.table--hover tbody tr:hover {
+  background-color: map.get(theme.$theme, 'soft-mint');
+  color: map.get(theme.$theme, 'dark-charcoal');
+}
+
+// compact
+.table--compact { th, td { padding: map.get(sizing.$space-scale, sm) * 0.75; } }
+
+// dense
+.table--dense   { th, td { padding: map.get(sizing.$space-scale, sm) * 0.5;  } }
+
+/* Align helpers */
+.table--align-top    th, .table--align-top    td { vertical-align: top; }
+.table--align-middle th, .table--align-middle td { vertical-align: middle; }
+.table--align-bottom th, .table--align-bottom td { vertical-align: bottom; }
+
+/* Row/Cell states */
+.table tr.is-selected,
+.table td.is-selected,
+.table th.is-selected {
+  background-color: map.get(theme.$theme, 'info');
+  color: #fff;
+}
+
+.table td.is-danger,   .table th.is-danger   { color: map.get(theme.$theme, 'danger'); }
+.table td.is-warning,  .table th.is-warning  { color: map.get(theme.$theme, 'warning'); }
+.table td.is-success,  .table th.is-success  { color: map.get(theme.$theme, 'success'); }
+
+/* Responsive wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /* Keep table width natural inside the scroller */
+  .table { min-width: 640px; }
+}
+
+/* Caption */
+.table caption {
+  caption-side: top; /* change to 'bottom' if you prefer */
+  padding: map.get(sizing.$space-scale, '1') 0;
+  color: map.get(theme.$theme, 'dark-charcoal');
+  font-weight: 600;
+}

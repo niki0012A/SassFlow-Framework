@@ -4,15 +4,13 @@
 @use "../variables/colors" as colors;
 @use "../variables/typography" as typography;
 
-
-
 // ------------------------------
 // Base list styles
 // ------------------------------
 ul,
 ol {
-  margin: map-get(sizing.$space-scale, md) 0;
-  padding-left: map-get(sizing.$space-scale, lg);
+  margin: map.get(sizing.$space-scale, md) 0;
+  padding-left: map.get(sizing.$space-scale, lg);
   font-family: typography.$font-family-body;
   line-height: typography.$line-height-base;
   color: colors.$dark-charcoal;
@@ -25,10 +23,10 @@ ul {
   list-style-type: disc;
 
   li {
-    margin-bottom: map-get(sizing.$space-scale, xs);
+    margin-bottom: map.get(sizing.$space-scale, xs);
 
     &::marker {
-      color: colors.$deep-teal; // matches framework tone
+      color: colors.$deep-teal;
       font-size: 1.1em;
     }
   }
@@ -41,7 +39,7 @@ ol {
   list-style-type: decimal;
 
   li {
-    margin-bottom: map-get(sizing.$space-scale, xs);
+    margin-bottom: map.get(sizing.$space-scale, xs);
 
     &::marker {
       color: colors.$vibrant-coral;
@@ -55,9 +53,9 @@ ol {
 // ------------------------------
 ul ul,
 ol ol {
-  margin-top: map-get(sizing.$space-scale, xs);
-  margin-bottom: map-get(sizing.$space-scale, xs);
-  padding-left: map-get(sizing.$space-scale, lg);
+  margin-top: map.get(sizing.$space-scale, xs);
+  margin-bottom: map.get(sizing.$space-scale, xs);
+  padding-left: map.get(sizing.$space-scale, lg);
 
   li::marker {
     color: colors.$sage-green;
@@ -67,8 +65,6 @@ ol ol {
 // ------------------------------
 // Utility Classes
 // ------------------------------
-
-// Inline List - horizontal nav or tags
 .list-inline {
   list-style: none;
   margin: 0;
@@ -76,7 +72,7 @@ ol ol {
 
   li {
     display: inline-block;
-    margin-right: map-get(sizing.$space-scale, md);
+    margin-right: map.get(sizing.$space-scale, md);
     font-weight: typography.$fw-medium;
 
     &:last-child {
@@ -85,7 +81,6 @@ ol ol {
   }
 }
 
-// Bordered List - for clean, divided content
 .list-bordered {
   list-style: none;
   margin: 0;
@@ -94,19 +89,18 @@ ol ol {
 
   li {
     border-bottom: 1px solid colors.$light-blue;
-    padding: map-get(sizing.$space-scale, sm) 0;
+    padding: map.get(sizing.$space-scale, sm) 0;
   }
 }
 
-// Numbered Step List - for instructions
 .list-steps {
   counter-reset: step;
 
   li {
     counter-increment: step;
     position: relative;
-    margin-bottom: map-get(sizing.$space-scale, md);
-    padding-left: map-get(sizing.$space-scale, lg);
+    margin-bottom: map.get(sizing.$space-scale, md);
+    padding-left: map.get(sizing.$space-scale, lg);
     font-weight: typography.$fw-medium;
 
     &::before {
@@ -116,7 +110,7 @@ ol ol {
       background-color: colors.$deep-teal;
       color: colors.$bright-white;
       font-weight: typography.$fw-bold;
-      border-radius: map-get(sizing.$radius, circle);
+      border-radius: map.get(sizing.$radius, circle);
       width: 1.5rem;
       height: 1.5rem;
       display: flex;
