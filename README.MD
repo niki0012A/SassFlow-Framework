@@ -18,27 +18,25 @@ This project was created as an academic collaboration focused on CSS architectur
 SassFlow uses a theme-first approach, with centralized variables and utility classes for layout, spacing, colors, and typography. Built entirely with Sass, it enables easy customization through maps and variables, while maintaining scalability and clean code organization across projects.
 
 ---
-
-## 📁 Project Structure
-📦 sassflow
+```
+📦 SASSFLOW-FRAMEWORK/
 ├── 📂 css
 │   └── sassflow.css                  # Compiled CSS file
 ├── 📂 src
 │   ├── 📂 base                      # Base styles including components and utilities
-│   │   ├── align.scss
-│   │   ├── alignments.scss
-│   │   ├── buttons.scss
-│   │   ├── forms.scss
-│   │   ├── headings.scss
-│   │   ├── images.scss
-│   │   ├── flex.scss               
-│   │   ├── justify.scss
-│   │   ├── layout.scss
-│   │   ├── lists.scss
-│   │   ├── tables.scss
-│   │   ├── typography.scss
-│   │   ├── utilities.scss
-│   │   └── index.scss               # Imports all base partials
+│   │   ├── _align.scss
+│   │   ├── _buttons.scss
+│   │   ├── _flex.scss
+│   │   ├── _forms.scss
+│   │   ├── _headings.scss
+│   │   ├── _images.scss
+│   │   ├── _justify.scss               
+│   │   ├── _layout.scss
+│   │   ├── _links.scss
+│   │   ├── _lists.scss
+│   │   ├── _tables.scss
+│   │   ├── _utilities.scss
+│   │   ├── _index.scss            # Imports all base partials
 │   ├── 📂 font                      # Fonts
 │   │   ├── font-inter.scss
 │   │   ├── font-fira-code.scss
@@ -55,9 +53,8 @@ SassFlow uses a theme-first approach, with centralized variables and utility cla
 │   │  
 │   ├── sassflow.scss               # Main Sass entry file importing all src partials
 ├── index.html                      # Showcase/demo page
-└── README.md                       # Documentation
-
-
+└── README.md 
+```
 
 ---
 
