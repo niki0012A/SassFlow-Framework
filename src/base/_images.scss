@@ -1,3 +1,119 @@
 @use 'sass:map';
 @use '../variables/colors' as colors;
 @use '../variables/sizing' as sizing;
+@use '../variables/theme' as theme;
+
+/*
+   IMAGES MODULE – responsive, decorative & aspect helpers
+*/
+
+/* -------------------------------
+   Responsive Behaviour
+   ------------------------------- */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-full {
+  width: 100%;
+  height: auto;
+}
+
+.img-auto {
+  width: auto;
+  height: auto;
+}
+
+/* -------------------------------
+   Shapes & Radius
+   ------------------------------- */
+.img-rounded {
+  border-radius: 8px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-pill {
+  border-radius: 9999px;
+}
+
+/* -------------------------------
+   Borders & Shadows
+   ------------------------------- */
+.img-border {
+  border: 2px solid colors.$soft-mint;
+}
+
+.img-border-primary {
+  border: 2px solid map.get(theme.$theme, 'primary');
+}
+
+.img-shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+.img-shadow { box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+.img-shadow-lg { box-shadow: 0 12px 28px rgba(0,0,0,.18); }
+
+/* -------------------------------
+   Object Fit & Position
+   ------------------------------- */
+.object-contain { object-fit: contain; }
+.object-cover { object-fit: cover; }
+.object-fill { object-fit: fill; }
+.object-none { object-fit: none; }
+
+.object-top { object-position: top; }
+.object-center { object-position: center; }
+.object-bottom { object-position: bottom; }
+.object-left { object-position: left; }
+.object-right { object-position: right; }
+
+/* -------------------------------
+   Aspect Ratios
+   ------------------------------- */
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+.aspect-photo { aspect-ratio: 4 / 3; }
+.aspect-portrait { aspect-ratio: 3 / 4; }
+.aspect-wide { aspect-ratio: 21 / 9; }
+
+/* -------------------------------
+   Loading & Filters
+   ------------------------------- */
+.img-blur {
+  filter: blur(4px);
+}
+
+.img-grayscale {
+  filter: grayscale(100%);
+}
+
+.img-saturate {
+  filter: saturate(1.3);
+}
+
+.img-hover-zoom {
+  transition: transform 0.4s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* -------------------------------
+   Frame Utilities (for cards, banners)
+   ------------------------------- */
+.img-frame {
+  padding: map.get(sizing.$space-scale, xs);
+  background-color: colors.$bright-white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.img-frame-dark {
+  padding: map.get(sizing.$space-scale, xs);
+  background-color: colors.$dark-charcoal;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

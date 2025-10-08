@@ -1,0 +1,18 @@
+
+
+/* Justify Content (main axis) */
+.justify-start { justify-content: flex-start !important; }
+.justify-center { justify-content: center !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+.justify-evenly { justify-content: space-evenly !important; }
+
+/* Align Content (cross-axis for multi-line flex containers) */
+.content-start { align-content: flex-start !important; }
+.content-center { align-content: center !important; }
+.content-end { align-content: flex-end !important; }
+.content-between { align-content: space-between !important; }
+.content-around { align-content: space-around !important; }
+.content-evenly { align-content: space-evenly !important; }
+.content-stretch { align-content: stretch !important; }

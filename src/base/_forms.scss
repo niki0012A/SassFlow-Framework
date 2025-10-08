@@ -1,5 +1,310 @@
 @use 'sass:map';
-@use '../variables/theme' as theme;
-@use '../variables/sizing';
-@use '../variables/colors';
+@use '../variables/sizing' as sizing;
+@use '../variables/colors' as colors;
+@use '../variables/typography' as type;
+@use '../variables/theme' as theme; 
+/* ========== Form Layout ========== */
+.form { display: block; width: 100%; }
+.form-field { margin-bottom: map.get(sizing.$space-scale, md); }
+.form-row { display: flex; gap: map.get(sizing.$space-scale, md); }
+.form-col { flex: 1 1 0; }
 
+/* ========== Labels & Help ========== */
+.form-label {
+  display: inline-block;
+  margin-bottom: map.get(sizing.$space-scale, xs);
+  font-family: type.$font-family-body;
+  font-weight: type.$fw-medium;
+  color: colors.$dark-charcoal;
+}
+.form-help {
+  display: block;
+  margin-top: map.get(sizing.$space-scale, xs);
+  font-size: 0.875rem;
+  color: colors.$light-blue;
+}
+.form-required { color: colors.$vibrant-coral; }
+
+/* ========== Controls ========== */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+select,
+textarea {
+  width: 100%;
+  display: block;
+  font-family: type.$font-family-body;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: colors.$dark-charcoal;
+  background: colors.$bright-white;
+  border: 1px solid colors.$soft-mint;
+  border-radius: map.get(sizing.$radius, gentle);
+  padding: calc(map.get(sizing.$space-scale, sm) - 1px) map.get(sizing.$space-scale, md);
+  transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease;
+  outline: none;
+}
+
+textarea { min-height: 7.5rem; resize: vertical; }
+
+/* Custom select caret (CSS-only) */
+select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, colors.$deep-teal 50%),
+    linear-gradient(135deg, colors.$deep-teal 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* ========== States ========== */
+:where(input, select, textarea)[readonly],
+:where(input, select, textarea).is-readonly {
+  background: colors.$warm-beige;
+  color: colors.$dark-charcoal;
+}
+
+:where(input, select, textarea):focus {
+  border-color: colors.$deep-teal;
+  box-shadow: 0 0 0 3px rgba(42, 93, 103, .15);
+}
+
+:where(input, select, textarea):disabled {
+  cursor: not-allowed;
+  background: rgba(0,0,0,.04);
+  color: rgba(0,0,0,.45);
+  border-color: rgba(0,0,0,.08);
+}
+
+/* Placeholder */
+::placeholder { color: rgba(0,0,0,.45); }
+
+/* ========== Variants ========== */
+.is-outline {
+  background: transparent;
+  border-color: colors.$deep-teal;
+  color: colors.$dark-charcoal;
+}
+.is-outline:focus { box-shadow: 0 0 0 3px rgba(42, 93, 103, .15); }
+
+.is-filled {
+  background: colors.$soft-mint;
+  border-color: colors.$soft-mint;
+}
+.is-filled:focus {
+  background: colors.$bright-white;
+  border-color: colors.$deep-teal;
+}
+
+.is-ghost {
+  background: transparent;
+  border-color: transparent;
+}
+.is-ghost:focus {
+  border-color: colors.$deep-teal;
+  box-shadow: 0 0 0 3px rgba(42,93,103,.15);
+}
+
+/* ========== Sizes ========== */
+.is-sm {
+  font-size: .9rem;
+  padding: calc(map.get(sizing.$space-scale, xs) - 1px) map.get(sizing.$space-scale, sm);
+  border-radius: map.get(sizing.$radius, subtle);
+}
+.is-lg {
+  font-size: 1.125rem;
+  padding: calc(map.get(sizing.$space-scale, md) - 1px) map.get(sizing.$space-scale, lg);
+  border-radius: map.get(sizing.$radius, soft);
+}
+
+/* ========== Validation ========== */
+.is-error,
+.has-error .form-control {
+  border-color: colors.$red;
+}
+.is-error:focus,
+.has-error .form-control:focus {
+  /* use your brighter red for focus ring pop */
+  box-shadow: 0 0 0 3px rgba(192, 88, 88, .22); /* $red-bright at ~22% */
+}
+.error-text {
+  color: colors.$red;
+  font-size: .875rem;
+  margin-top: map.get(sizing.$space-scale, xs);
+}
+
+.is-success,
+.has-success .form-control { border-color: colors.$sage-green; }
+.is-success:focus,
+.has-success .form-control:focus { box-shadow: 0 0 0 3px rgba(156, 175, 136, .22); }
+.success-text {
+  color: colors.$sage-green;
+  font-size: .875rem;
+  margin-top: map.get(sizing.$space-scale, xs);
+}
+
+/* ========== Input Groups ========== */
+.input-group { display: flex; width: 100%; }
+.input-group > .form-control { flex: 1 1 auto; }
+
+.input-group .addon {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 map.get(sizing.$space-scale, md);
+  border: 1px solid colors.$soft-mint;
+  background: colors.$bright-white;
+  color: colors.$dark-charcoal;
+  font-weight: type.$fw-medium;
+}
+.input-group .addon:first-child {
+  border-right: 0;
+  border-top-left-radius: map.get(sizing.$radius, gentle);
+  border-bottom-left-radius: map.get(sizing.$radius, gentle);
+}
+.input-group .addon:last-child {
+  border-left: 0;
+  border-top-right-radius: map.get(sizing.$radius, gentle);
+  border-bottom-right-radius: map.get(sizing.$radius, gentle);
+}
+
+.input-with-icon { position: relative; }
+.input-with-icon .icon {
+  position: absolute;
+  left: map.get(sizing.$space-scale, sm);
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.input-with-icon .form-control {
+  padding-left: calc(map.get(sizing.$space-scale, lg) + map.get(sizing.$space-scale, xs));
+}
+
+/* ========== Checkboxes ========== */
+.control-checkbox,
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.1rem; height: 1.1rem;
+  border: 1.5px solid colors.$soft-mint;
+  border-radius: map.get(sizing.$radius, subtle);
+  background: colors.$bright-white;
+  display: inline-grid; place-content: center;
+  vertical-align: middle;
+  transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+input[type="checkbox"]:focus {
+  box-shadow: 0 0 0 3px rgba(42,93,103,.15);
+  border-color: colors.$deep-teal;
+}
+input[type="checkbox"]::after {
+  content: "";
+  width: .6rem; height: .6rem;
+  transform: scale(0);
+  transition: transform .12s ease;
+  background: colors.$deep-teal;
+  border-radius: 2px;
+}
+input[type="checkbox"]:checked { border-color: colors.$deep-teal; }
+input[type="checkbox"]:checked::after { transform: scale(1); }
+
+/* ========== Radios ========== */
+.control-radio,
+input[type="radio"] {
+  appearance: none;
+  width: 1.1rem; height: 1.1rem;
+  border: 1.5px solid colors.$soft-mint;
+  border-radius: 50%;
+  background: colors.$bright-white;
+  display: inline-grid; place-content: center;
+  vertical-align: middle;
+}
+input[type="radio"]:focus { box-shadow: 0 0 0 3px rgba(42,93,103,.15); border-color: colors.$deep-teal; }
+input[type="radio"]::after {
+  content: "";
+  width: .55rem; height: .55rem;
+  background: colors.$deep-teal;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform .12s ease;
+}
+input[type="radio"]:checked { border-color: colors.$deep-teal; }
+input[type="radio"]:checked::after { transform: scale(1); }
+
+/* ========== Switch ========== */
+.switch {
+  position: relative; display: inline-flex; align-items: center;
+  width: 2.25rem; height: 1.25rem;
+}
+.switch input {
+  appearance: none; width: 100%; height: 100%; margin: 0;
+  border-radius: 9999px; background: rgba(0,0,0,.2);
+  position: relative; transition: background-color .15s ease;
+}
+.switch input::after {
+  content: ""; position: absolute; left: 2px; top: 2px;
+  width: 1rem; height: 1rem; border-radius: 50%;
+  background: colors.$bright-white; transition: transform .15s ease;
+}
+.switch input:checked { background: colors.$deep-teal; }
+.switch input:checked::after { transform: translateX(1rem); }
+.switch input:focus { box-shadow: 0 0 0 3px rgba(42,93,103,.15); }
+
+/* ========== Range ========== */
+input[type="range"] {
+  width: 100%; height: 2px;
+  background: colors.$soft-mint; border-radius: 2px; appearance: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none; width: 14px; height: 14px; border-radius: 50%;
+  background: colors.$deep-teal; cursor: pointer;
+}
+input[type="range"]::-moz-range-thumb {
+  width: 14px; height: 14px; border: none; border-radius: 50%;
+  background: colors.$deep-teal; cursor: pointer;
+}
+
+/* ========== File Input ========== */
+.input-file {
+  display: inline-flex; align-items: center;
+  gap: map.get(sizing.$space-scale, sm);
+  padding: map.get(sizing.$space-scale, sm) map.get(sizing.$space-scale, md);
+  border: 1px dashed colors.$soft-mint;
+  border-radius: map.get(sizing.$radius, gentle);
+  background: colors.$bright-white; color: colors.$dark-charcoal;
+}
+.input-file:hover { border-color: colors.$deep-teal; }
+
+/* ========== Inline Choices ========== */
+.choices { display: flex; flex-wrap: wrap; gap: map.get(sizing.$space-scale, sm); }
+.choice { display: inline-flex; align-items: center; gap: map.get(sizing.$space-scale, xs); }
+
+/* ========== Required Asterisk Helper ========== */
+label[for][data-required="true"]::after { content: " *"; color: colors.$vibrant-coral; }
+
+/* ========== Form Actions ========== */
+.form-actions {
+  display: flex; gap: map.get(sizing.$space-scale, sm);
+  align-items: center; justify-content: flex-end;
+  margin-top: map.get(sizing.$space-scale, md);
+}
+
+/* ========== Horizontal Form ========== */
+.form-horizontal .form-field {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: map.get(sizing.$space-scale, md);
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .form-horizontal .form-field { grid-template-columns: 1fr; }
+}
