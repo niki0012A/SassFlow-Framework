@@ -951,7 +951,7 @@ ol ol li::marker {
 
 .button-primary {
   background-color: #1C2541;
-  color: white;
+  color: #E0FBFC;
   border: none;
   padding: 0.75rem 1.5rem;
   font-size: 20px;
@@ -976,13 +976,13 @@ ol ol li::marker {
 }
 
 .button-secondary:hover {
-  background-color: #98C1D9;
+  background-color: #9684D3;
   transition: background-color 0.3s ease;
 }
 
 .button-warning {
   background-color: #8A2525;
-  color: white;
+  color: #E0FBFC;
   border: none;
   padding: 0.75rem 1.2rem;
   font-size: 20px;
@@ -2555,6 +2555,21 @@ FLEX MODULE – container & item behaviors
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+a {
+  text-decoration: underline;
+  color: #1C2541;
+  font-weight: 400;
+}
+a:hover {
+  text-decoration: none;
+}
+a[target=_blank] {
+  color: #9CAF88;
+}
+a[target=_blank]:before {
+  content: "→";
 }
 
 /*# sourceMappingURL=sassflow.css.map */
