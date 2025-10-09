@@ -6,7 +6,7 @@
 
 .button-primary {
     background-color: map.get(theme.$theme, 'primary');
-    color: white;
+    color: bright-white;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: map.get(sizing.$font-sizes, 'md');
@@ -36,7 +36,7 @@
 
 .button-warning {
     background-color: map.get(theme.$theme, 'danger');
-    color: white;
+    color: colors.$bright-white;
     border: none;
     padding: 0.75rem 1.2rem;
     font-size: map.get(sizing.$font-sizes, 'md');
@@ -45,6 +45,6 @@
 }
 
 .button-warning:hover {
-    background-color: colors.$red-bright;
+    background-color: colors.$red;
     transition: background-color 0.3s ease;
 }
