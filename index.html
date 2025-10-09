@@ -3,62 +3,402 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SassFlow Framework</title>
+    <title>SassFlow Framework - Complete Demo</title>
     <link rel="stylesheet" href="css/sassflow.css">
 </head>
 <body>
-    <div class="container">
-        <div>
-            <h1>H1</h1>
-            <h2>H2</h2>
-            <h3>H3</h3>
-            <h4>H4</h4>
-            <h5>H5</h5>
-            <h6>H6</h6>
-            <p>This is a sample paragraph to demonstrate the typography styles defined in the SassFlow framework.</p>
+    <!-- Header -->
+    <header class="bg-info text-bright-white py-lg">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="mb-sm">SassFlow Framework</h1>
+                <p class="text-lg">A comprehensive Sass-powered CSS framework</p>
+            </div>
         </div>
-        <div>
-            <button class="button-primary">Primary Button</button>
-            <button class="button-secondary">Secondary Button</button>
-            <button class="button-warning">Warning Button</button>
+    </header>
+
+    <!-- Headings Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Typography & Headings</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <h1>H1 Heading</h1>
+                <h2>H2 Heading</h2>
+                <h3>H3 Heading</h3>
+                <h4>H4 Heading</h4>
+                <h5>H5 Heading</h5>
+                <h6>H6 Heading</h6>
+                <div class="mt-lg">
+                    <p>This is a standard paragraph demonstrating the body text style. The typography system provides excellent readability with appropriate line height and comfortable spacing.</p>
+                    <p class="text-muted">This is muted text for secondary information or less prominent content.</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <h2>Unordered List</h2>
-            <ul>
-              <li>Apples</li>
-              <li>Bananas</li>
-              <li>Oranges</li>
-            </ul>
-          
-            <h2>Ordered List</h2>
-            <ol>
-              <li>Preheat the oven</li>
-              <li>Mix ingredients</li>
-              <li>Bake for 30 minutes</li>
-            </ol>
-          
-            <h2>Inline List</h2>
-            <ul class="list-inline">
-              <li>Home</li>
-              <li>About</li>
-              <li>Services</li>
-              <li>Contact</li>
-            </ul>
-          
-            <h2>Bordered List</h2>
-            <ul class="list-bordered">
-              <li>Dashboard</li>
-              <li>Reports</li>
-              <li>Analytics</li>
-            </ul>
-          
-            <h2>Step List</h2>
-            <ol class="list-steps">
-              <li>Sign up for an account</li>
-              <li>Verify your email</li>
-              <li>Start exploring SassFlow</li>
-            </ol>
-          </div>
-    </div>
+    </section>
+   
+    <!-- Links Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Link Components</h2>
+            <div class="demo-box p-md radius-gentle bg-warm-beige">
+                <div class="flex gap-2 flex-wrap">
+                    <a href="#" class="text-primary text-decoration-none hover:text-muted">Primary Link</a>
+                    <a href="https://github.com" class="text-secondary text-decoration-none hover:text-muted">Visit GitHub</a>
+                    <a href="https://x.ai" class="text-primary text-decoration-none hover:text-muted">Visit xAI</a>
+                    <a href="#" class="text-danger text-decoration-none hover:text-muted">Danger Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Color Palette</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <div class="flex gap-2 flex-wrap">
+                    <div class="p-sm radius-subtle bg-primary text-bright-white text-center">Primary</div>
+                    <div class="p-sm radius-subtle bg-info text-bright-white text-center">Info</div>
+                    <div class="p-sm radius-subtle bg-secondary text-bright-white text-center">Secondary</div>
+                    <div class="p-sm radius-subtle bg-warning text-dark-charcoal text-center">Warning</div>
+                    <div class="p-sm radius-subtle bg-danger text-bright-white text-center">Danger</div>
+                    <div class="p-sm radius-subtle bg-success text-bright-white text-center">Success</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buttons Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Button Components</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <div class="flex gap-2 flex-wrap">
+                    <a href="#" class="button-primary">Get Started</a>
+                    <a href="#" class="button-secondary">Learn More</a>
+                    <a href="#" class="button-warning">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lists Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">List Components</h2>
+            <div class="grid md:grid-3 gap-lg">
+                <div class="demo-box p-md radius-gentle bg-soft-mint">
+                    <h4>Unordered List</h4>
+                    <ul>
+                        <li>Apples</li>
+                        <li>Banana</li>
+                        <li>Oranges</li>
+                        <li>Mango</li>
+                    </ul>
+                </div>
+                <div class="demo-box p-md radius-gentle bg-soft-mint">
+                    <h4>Ordered List</h4>
+                    <ol>
+                        <li>Preheat the oven</li>
+                        <li>Mix ingredients</li>
+                        <li>Bake for 30 minutes</li>
+                        <li>Let cool before serving</li>
+                    </ol>
+                </div>
+                <div class="demo-box p-md radius-gentle bg-soft-mint">
+                    <h4>Inline List</h4>
+                    <ul class="list-inline">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+                <div class="demo-box p-md radius-gentle bg-soft-mint">
+                    <h4>Bordered List</h4>
+                    <ul class="list-bordered">
+                        <li>Dashboard</li>
+                        <li>Report</li>
+                        <li>Analytics</li>
+                        <li>KPI</li>
+                    </ul>
+                </div>
+                <div class="demo-box p-md radius-gentle bg-soft-mint">
+                    <h4>Step List</h4>
+                    <ol class="list-steps">
+                          <li>Sign up for an account</li>
+                          <li>Verify your email</li>
+                          <li>Start exploring SassFlow</li>
+                          <li>Build amazing projects</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flexbox Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Flexbox Layout System</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint mb-lg">
+                <h4>Flex Direction Examples</h4>
+                <div class="mb-md">
+                    <p class="text-sm mb-sm">Row Layout</p>
+                    <div class="flex gap-md">
+                        <div class="flex-1 bg-primary text-bright-white p-md radius-gentle text-center">Row Item 1</div>
+                        <div class="flex-1 bg-primary text-bright-white p-md radius-gentle text-center">Row Item 2</div>
+                        <div class="flex-1 bg-primary text-bright-white p-md radius-gentle text-center">Row Item 3</div>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-sm mb-sm">Column Layout</p>
+                    <div class="flex flex-col gap-md">
+                        <div class="bg-success text-bright-white p-md radius-gentle text-center">Column Item 1</div>
+                        <div class="bg-success text-bright-white p-md radius-gentle text-center">Column Item 2</div>
+                        <div class="bg-success text-bright-white p-md radius-gentle text-center">Column Item 3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <h4>Flex Grow & Shrink</h4>
+                <div class="flex gap-md">
+                    <div class="grow bg-warning text-dark-charcoal p-md radius-gentle text-center">Flexible (grow)</div>
+                    <div class="bg-warning text-dark-charcoal p-md radius-gentle text-center">Fixed</div>
+                    <div class="bg-warning text-dark-charcoal p-md radius-gentle text-center">Fixed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alignment & Justification Section -->
+    <section class="demo-section py-lg text-bright-white">
+        <div class="container">
+            <h2 class="component-title mb-lg text-dark-charcoal">Alignment & Justification</h2>
+            <div class="grid md:grid-2 gap-lg">
+                <div class="demo-box p-md radius-gentle bg-sage-green">
+                    <h4 class="text-dark-charcoal">Justify Content</h4>
+                    <div class="mb-md">
+                        <p class="text-sm text-dark-charcoal">Justify Start (Default)</p>
+                        <div class="flex justify-start gap-sm bg-soft-mint p-sm radius-gentle">
+                            <div class="bg-primary text-bright-white p-sm radius-subtle">Item</div>
+                            <div class="bg-primary text-bright-white p-sm radius-subtle">Item</div>
+                        </div>
+                    </div>
+                    <div class="mb-md">
+                        <p class="text-sm text-dark-charcoal">Justify Center</p>
+                        <div class="flex justify-center gap-sm bg-soft-mint p-sm radius-gentle">
+                            <div class="bg-primary text-bright-white p-sm radius-subtle">Item</div>
+                            <div class="bg-primary text-bright-white p-sm radius-subtle">Item</div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-dark-charcoal">Justify Between</p>
+                        <div class="flex justify-between gap-sm bg-soft-mint p-sm radius-gentle">
+                            <div class="bg-primary text-bright-white p-sm radius-subtle">First</div>
+                            <div class="bg-primary text-bright-white p-sm radius-subtle">Last</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-box p-md radius-gentle bg-sage-green">
+                    <h4 class="text-dark-charcoal">Align Items</h4>
+                    <div class="mb-md">
+                        <p class="text-sm text-dark-charcoal">Align Start</p>
+                        <div class="flex items-start gap-sm bg-soft-mint p-sm radius-gentle" style="height: 150px">
+                            <div class="bg-primary text-bright-white p-sm radius-subtle shadow-sm text-center" style="height: 40px; line-height: 40px">Start</div>
+                            <div class="bg-success text-bright-white p-sm radius-subtle shadow-sm text-center" style="height: 80px; line-height: 80px">Start</div>
+                            <div class="bg-warning text-dark-charcoal p-sm radius-subtle shadow-sm text-center" style="height: 120px; line-height: 120px">Start</div>
+                        </div>
+                    </div>
+                    <div class="mb-md">
+                        <p class="text-sm text-dark-charcoal">Align Center</p>
+                        <div class="flex items-center gap-sm bg-soft-mint p-sm radius-gentle" style="height: 150px">
+                            <div class="bg-primary text-bright-white p-sm radius-subtle shadow-sm text-center" style="height: 40px; line-height: 40px">Center</div>
+                            <div class="bg-success text-bright-white p-sm radius-subtle shadow-sm text-center" style="height: 80px; line-height: 80px">Center</div>
+                            <div class="bg-warning text-dark-charcoal p-sm radius-subtle shadow-sm text-center" style="height: 120px; line-height: 120px">Center</div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-dark-charcoal">Align End</p>
+                        <div class="flex items-end gap-sm bg-soft-mint p-sm radius-gentle" style="height: 150px">
+                            <div class="bg-primary text-bright-white p-sm radius-subtle shadow-sm text-center" style="height: 40px; line-height: 40px">End</div>
+                            <div class="bg-success text-bright-white p-sm radius-subtle shadow-sm text-center" style="height: 80px; line-height: 80px">End</div>
+                            <div class="bg-warning text-dark-charcoal p-sm radius-subtle shadow-sm text-center" style="height: 120px; line-height: 120px">End</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Images Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Images</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <div class="mb-md">
+                    <div class="flex gap-3 flex-wrap">
+                        <div>
+                            <img src="https://placehold.co/300x300" class="img img-thumbnail shadow-sm" alt="Thumbnail Image">
+                        </div>
+                        <div>
+                            <img src="https://placehold.co/300x300" class="img img-avatar shadow-sm" alt="Avatar Image">
+                        </div>
+                        <div>
+                            <img src="https://placehold.co/300x300" class="img img-round shadow-sm" alt="Round Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layout System Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Layout System</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint mb-lg">
+                <h4>Container Sizes</h4>
+                <div class="grid gap-md">
+                    <div class="container-compact bg-primary text-bright-white p-md text-center radius-gentle">
+                        Compact Container (576px max)
+                    </div>
+                    <div class="container-comfortable bg-success text-bright-white p-md text-center radius-gentle">
+                        Comfortable Container (768px max)
+                    </div>
+                    <div class="container-spacious bg-warning text-dark-charcoal p-md text-center radius-gentle">
+                        Spacious Container (992px max)
+                    </div>
+                    <div class="container-expansive bg-danger text-bright-white p-md text-center radius-gentle">
+                        Expansive Container (1200px max)
+                    </div>
+                </div>
+            </div>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <h4>Spacing System</h4>
+                <div class="flex gap-md items-center flex-wrap">
+                    <div class="p-xs bg-primary text-bright-white radius-gentle">XS Padding</div>
+                    <div class="p-sm bg-success text-bright-white radius-gentle">SM Padding</div>
+                    <div class="p-md bg-warning text-dark-charcoal radius-gentle">MD Padding</div>
+                    <div class="p-lg bg-danger text-bright-white radius-gentle">LG Padding</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forms Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Form Components</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint max-w-comfortable">
+                <form class="form">
+                    <div class="form-field mb-md">
+                        <label class="form-label" for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-field mb-md">
+                        <label class="form-label" for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control is-filled" placeholder="your@email.com">
+                        <div class="form-help">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="form-field mb-md">
+                        <label class="form-label" for="department">Department</label>
+                        <select id="department" class="form-control">
+                            <option>Engineering</option>
+                            <option>Design</option>
+                            <option>Marketing</option>
+                            <option>Sales</option>
+                        </select>
+                    </div>
+                    <div class="form-field mb-md">
+                        <label class="form-label" for="message">Project Description</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Describe your project..."></textarea>
+                    </div>
+                    <div class="form-field mb-md">
+                        <label class="choice">
+                            <input type="checkbox" name="subscribe">
+                            <span>Subscribe to newsletter</span>
+                        </label>
+                    </div>
+                    <div class="form-actions flex gap-md">
+                        <button type="reset" class="button-secondary">Cancel</button>
+                        <button type="submit" class="button-primary">Submit Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tables Section -->
+    <section class="demo-section py-lg">
+        <div class="container">
+            <h2 class="component-title mb-lg">Table Components</h2>
+            <div class="demo-box p-md radius-gentle bg-soft-mint">
+                <div class="table-responsive">
+                    <table class="table table--striped table--hover">
+                        <thead>
+                            <tr>
+                                <th>Employee</th>
+                                <th>Department</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Projects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sarah Johnson</td>
+                                <td>Engineering</td>
+                                <td>Frontend Developer</td>
+                                <td class="text-success">Active</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Michael Chen</td>
+                                <td>Design</td>
+                                <td>UI/UX Designer</td>
+                                <td class="text-success">Active</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>Emily Rodriguez</td>
+                                <td>Marketing</td>
+                                <td>Content Strategist</td>
+                                <td class="text-warning">On Leave</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>David Kim</td>
+                                <td>Engineering</td>
+                                <td>Backend Developer</td>
+                                <td class="text-success">Active</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Lisa Thompson</td>
+                                <td>Sales</td>
+                                <td>Account Executive</td>
+                                <td class="text-danger">Inactive</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" class="text-right"><strong>Total Active Employees:</strong></td>
+                                <td><strong>3</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-charcoal text-bright-white py-lg">
+        <div class="container text-center">
+            <p class="mb-sm">&copy; 2025 SassFlow Framework. All rights reserved.</p>
+            <p class="text-sm text-muted">Built with modern Sass architecture for scalable design systems</p>
+        </div>
+    </footer>
 </body>
 </html>
