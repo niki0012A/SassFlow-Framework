@@ -133,11 +133,7 @@ Visibility, text alignment, shadows, backgrounds, borders, and more.
   <div class="box-150 bg-primary text-bright-white">Box 1</div>
   <div class="box-150 bg-secondary text-bright-white">Box 2</div>
 </div>
-<div class="grid md:grid-3 gap-lg">
-  <div class="bg-success text-bright-white p-md">Grid Item 1</div>
-  <div class="bg-success text-bright-white p-md">Grid Item 2</div>
-  <div class="bg-success text-bright-white p-md">Grid Item 3</div>
-</div>
+
 ```
 
 ### Tables
