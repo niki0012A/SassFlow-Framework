@@ -233,8 +233,8 @@ sass src/main.scss css/sassflow.css
 ---
 ## Tips
 
-- Utility classes like `.w-full`, `.h-100`, `.gap-md`, `.radius-gentle`, `.text-success` are dynamically from Sass maps.
--Combine utilities such as `.box-150`, `.text-lg`, `.radius-lg`, and `.bg-primary`. for consistent styling. 
+- Utility classes like `.w-full`, `.h-100`,  `.radius-gentle`, `.text-success` are dynamically from Sass maps.
+-Combine utilities such as `.text-lg`, `.radius-lg`, and `.bg-primary`. for consistent styling. 
 -Typography, layout, colors, and buttons sync globally via variables for easy theme adjustments.
 - The design system is scalable: update one variable, and the entire framework adapts.
 - Default HTML elements are styled cohesively without extra CSS.
