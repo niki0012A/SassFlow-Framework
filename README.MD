@@ -20,42 +20,6 @@ SassFlow uses a theme-first approach, with centralized variables and utility cla
 ---
 
 ## 📁 Project Structure
-📦 sassflow
-├── 📂 css
-│   └── sassflow.css                  # Compiled CSS file
-├── 📂 src
-│   ├── 📂 base                      # Base styles including components and utilities
-│   │   ├── align.scss
-│   │   ├── alignments.scss
-│   │   ├── buttons.scss
-│   │   ├── forms.scss
-│   │   ├── headings.scss
-│   │   ├── images.scss
-│   │   ├── flex.scss               
-│   │   ├── justify.scss
-│   │   ├── layout.scss
-│   │   ├── lists.scss
-│   │   ├── tables.scss
-│   │   ├── typography.scss
-│   │   ├── utilities.scss
-│   │   └── index.scss               # Imports all base partials
-│   ├── 📂 font                      # Fonts
-│   │   ├── font-inter.scss
-│   │   ├── font-fira-code.scss
-│   │   └── index.scss               # Imports all font partials
-│   ├── 📂 reset                     # Reset styles
-│   │   └── reset.scss
-│   ├── 📂 variables                 # Theme variables and Sass maps
-│   │   ├── colors.scss
-│   │   ├── radius.scss
-│   │   ├── sizing.scss
-│   │   ├── theme.scss
-│   │   └── typography.scss
-│   │   ├── index.scss              # Imports all variables partials
-│   │  
-│   ├── sassflow.scss               # Main Sass entry file importing all src partials
-├── index.html                      # Showcase/demo page
-└── README.md                       # Documentation
 
 ```
 📦 SASSFLOW-FRAMEWORK/
