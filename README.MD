@@ -18,9 +18,46 @@ This project was created as an academic collaboration focused on CSS architectur
 SassFlow uses a theme-first approach, with centralized variables and utility classes for layout, spacing, colors, and typography. Built entirely with Sass, it enables easy customization through maps and variables, while maintaining scalability and clean code organization across projects.
 
 ---
-```
-## 📁 Project Structure
 
+## 📁 Project Structure
+📦 sassflow
+├── 📂 css
+│   └── sassflow.css                  # Compiled CSS file
+├── 📂 src
+│   ├── 📂 base                      # Base styles including components and utilities
+│   │   ├── align.scss
+│   │   ├── alignments.scss
+│   │   ├── buttons.scss
+│   │   ├── forms.scss
+│   │   ├── headings.scss
+│   │   ├── images.scss
+│   │   ├── flex.scss               
+│   │   ├── justify.scss
+│   │   ├── layout.scss
+│   │   ├── lists.scss
+│   │   ├── tables.scss
+│   │   ├── typography.scss
+│   │   ├── utilities.scss
+│   │   └── index.scss               # Imports all base partials
+│   ├── 📂 font                      # Fonts
+│   │   ├── font-inter.scss
+│   │   ├── font-fira-code.scss
+│   │   └── index.scss               # Imports all font partials
+│   ├── 📂 reset                     # Reset styles
+│   │   └── reset.scss
+│   ├── 📂 variables                 # Theme variables and Sass maps
+│   │   ├── colors.scss
+│   │   ├── radius.scss
+│   │   ├── sizing.scss
+│   │   ├── theme.scss
+│   │   └── typography.scss
+│   │   ├── index.scss              # Imports all variables partials
+│   │  
+│   ├── sassflow.scss               # Main Sass entry file importing all src partials
+├── index.html                      # Showcase/demo page
+└── README.md                       # Documentation
+
+```
 📦 SASSFLOW-FRAMEWORK/
 ├── 📂 css
 │   └── sassflow.css                  # Compiled CSS file
@@ -119,19 +156,23 @@ Example classes: `h1, h2, h3, p`, `.text-primary`, `.font-sz-lg`
 Display utilities: `.d-block`, `.d-flex`, `.d-grid`  
 Flex utilities: `.flex`, `.flex-row`, `.items-center`, `.justify-between`  
 Spacing: `.p-4`, `.m-3`, `.gap-3`  
-Positioning: `.relative`, `.absolute`, `.z-10`  
 Visibility, text alignment, shadows, backgrounds, borders, and more.
 
 ```html
-<div class="p-4 mb-3">Box with padding and margin</div>
+<div class="p-md mb-lg shadow-sm">Box with padding, margin, and shadow</div>
 ```
 
 ### Layout with Flexbox
 
 ```html
-<div class="flex flex-wrap gap-3 justify-center align-center">
-  <div class="box-150 bg-primary"></div>
-  <div class="box-150 bg-secondary"></div>
+<div class="flex flex-wrap gap-md justify-center items-center">
+  <div class="box-150 bg-primary text-bright-white">Box 1</div>
+  <div class="box-150 bg-secondary text-bright-white">Box 2</div>
+</div>
+<div class="grid md:grid-3 gap-lg">
+  <div class="bg-success text-bright-white p-md">Grid Item 1</div>
+  <div class="bg-success text-bright-white p-md">Grid Item 2</div>
+  <div class="bg-success text-bright-white p-md">Grid Item 3</div>
 </div>
 ```
 
@@ -141,20 +182,35 @@ Base table styling with modifiers for borders, stripes, hover states, sizing, al
 
 Example modifiers: `.table--bordered`, `.table--striped`, `.table--compact`
 
+<table class="table table--striped table--hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Developer</td>
+    </tr>
+  </tbody>
+</table>
+
 ### Forms
 Well-designed form elements with visual variants and validation states.
 
 Modifiers include `.is-sm`, `.is-lg`, `.is-outline`, `.is-filled`, `.is-error`, `.form-horizontal`, `.input-group`, `.switch`
 
 ```html
-<form>
-  <label for="name">Name</label>
-  <input type="text" id="name" class="p-3">
-
-  <label for="message">Message</label>
-  <textarea id="message" class="p-3"></textarea>
-
-  <button type="submit" class="btn-success">Send</button>
+<form class="form">
+  <div class="form-field">
+    <label class="form-label" for="name">Name</label>
+    <input type="text" id="name" class="form-control is-filled">
+  </div>
+  <div class="form-actions">
+    <button type="submit" class="button-primary">Submit</button>
+  </div>
 </form>
 
 
@@ -167,6 +223,7 @@ Responsive images and shape classes:
 - Object fit and position utilities  
 - Aspect ratios with `.aspect-video`  
 - Filters and hover effects  
+
 
 ---
 
@@ -216,8 +273,8 @@ sass src/main.scss css/sassflow.css
 ---
 ## Tips
 
-- Utility classes like `.w-150`, `.h-100`, `.gap-3`, `.radius-md`, `.text-success` are dynamically from Sass maps.
--Combine utilities such as `.box-150`, `.font-sz-xl`, `.radius-lg`, and `.bg-primary`. for consistent styling. 
+- Utility classes like `.w-full`, `.h-100`, `.gap-md`, `.radius-gentle`, `.text-success` are dynamically from Sass maps.
+-Combine utilities such as `.box-150`, `.text-lg`, `.radius-lg`, and `.bg-primary`. for consistent styling. 
 -Typography, layout, colors, and buttons sync globally via variables for easy theme adjustments.
 - The design system is scalable: update one variable, and the entire framework adapts.
 - Default HTML elements are styled cohesively without extra CSS.
